@@ -6,6 +6,7 @@ const GigController = (app)=>{
 }
 
 const createGig =async  (req, res) => {
+    console.log(req.body)
     const newGig = req.body;
     const insertedGig = await gigsDao.createGigs(newGig)
     res.json(insertedGig);
